@@ -237,6 +237,22 @@
 
   <!-- <script src="./get_post_gss.js"></script> -->
   <script>
+    // ユーザーエージェントを取得
+    const userAgent = navigator.userAgent;
+
+    // デバイスの種類を判別
+    
+    if (userAgent.includes("iPhone")) {
+      // isIphone = true;
+      console.log("このデバイスはiPhoneです");
+    } else if (userAgent.includes("Android")) {
+      console.log("このデバイスはAndroidです");
+    } else if (userAgent.includes("Windows") || userAgent.includes("Mac")) {
+      console.log("このデバイスはPCです");
+    } else {
+      console.log("不明なデバイスです");
+    }
+    console.log("userAgent:", userAgent);
     // スプレッドシート　列　定数定義
     const END_POINT = "https://script.google.com/macros/s/AKfycbxwu48CP_C0v5ImH2EV5QR6EWkPrEL3wVuJM9jJs3hqQX-OSCtLhKQcb9a0P-v_VUD_/exec";
 
